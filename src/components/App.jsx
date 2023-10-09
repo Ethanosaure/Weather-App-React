@@ -5,11 +5,16 @@ import Header from "./Header";
 
 export default function App() {
   const [location, setLocation] = useState("");
+  const [allLocations, setAllLocations] = useState([]);
 
   return (
     <div>
-      <Header location={location} setLocation={setLocation} />
-      <Card />
+      <Header
+        location={location}
+        setLocation={setLocation}
+        setAllLocations={setAllLocations}
+      />
+      <Card allLocations={allLocations} />
     </div>
   );
 }

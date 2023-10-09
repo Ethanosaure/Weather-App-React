@@ -1,4 +1,4 @@
-function Header({ location, setLocation }) {
+function Header({ location, setLocation, setAllLocations }) {
   function handleInput(e) {
     setLocation(e.target.value);
   }
@@ -8,7 +8,9 @@ function Header({ location, setLocation }) {
       console.log("Veuillez mettre la première lettre en majuscule");
     }
   }
-  function createCard(location) {}
+  function createCard(location) {
+    setAllLocations(location);
+  }
   return (
     <div>
       <h1>What is the weather ?</h1>
