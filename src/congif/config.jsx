@@ -10,8 +10,9 @@ export async function API(location) {
 
   try {
     const response = await fetch(url, options);
-    const result = await response.text();
+    const result = await response.json();
     console.log(result);
+    console.log(result.location.name);
   } catch (error) {
     console.error(error);
   }
