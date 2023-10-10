@@ -5,7 +5,7 @@ import Header from "./Header";
 
 export default function App() {
   const [location, setLocation] = useState("");
-  const [allLocations, setAllLocations] = useState([]);
+  const [allLocations, setAllLocations] = useState(["Bruxelles"]);
 
   return (
     <div>
@@ -13,6 +13,7 @@ export default function App() {
         location={location}
         setLocation={setLocation}
         setAllLocations={setAllLocations}
+        allLocations={allLocations}
       />
       <Card allLocations={allLocations} />
     </div>

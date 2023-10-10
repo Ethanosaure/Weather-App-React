@@ -1,4 +1,4 @@
-function Header({ location, setLocation, setAllLocations }) {
+function Header({ location, setLocation, setAllLocations, allLocations }) {
   function handleInput(e) {
     setLocation(e.target.value);
   }
@@ -9,7 +9,7 @@ function Header({ location, setLocation, setAllLocations }) {
     }
   }
   function createCard(location) {
-    setAllLocations(location);
+    setAllLocations(...[allLocations], location);
   }
   return (
     <div>

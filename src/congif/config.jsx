@@ -11,9 +11,13 @@ export async function API(location) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
+
     console.log(result);
-    console.log(result.location.name);
+    // console.log(result.location.name);
+    // console.log(result.location.country);
+    return result;
   } catch (error) {
     console.error(error);
+    throw error;
   }
 }
