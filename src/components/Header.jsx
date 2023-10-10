@@ -9,7 +9,7 @@ function Header({ location, setLocation, setAllLocations, allLocations }) {
     }
   }
   function createCard(location) {
-    setAllLocations(...[allLocations], location);
+    setAllLocations(location);
   }
   return (
     <div>
